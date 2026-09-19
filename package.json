@@ -1,0 +1,25 @@
+{
+  "name": "booking-engine",
+  "version": "1.0.0",
+  "description": "Concurrent booking engine \u2014 prevents double-booking under load",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "migrate": "tsx scripts/migrate.ts",
+    "typecheck": "tsc --noEmit",
+    "seed": "tsx scripts/seed.ts",
+    "loadtest": "tsx scripts/loadtest.ts"
+  },
+  "dependencies": {
+    "fastify": "^5.2.1",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
